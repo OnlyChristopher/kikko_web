@@ -1,0 +1,5 @@
+Cambio requerido en línea 635:
+text-kikko-blue -> text-black
+
+Para cambiar la fuente de los botones de categoría no activos en el buscador horizontal del RecipesPageV2
+color kikko-blue a color negro (text-black)

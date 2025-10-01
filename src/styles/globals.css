@@ -1,0 +1,4857 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Colores corporativos Kikko actualizados */
+  --kikko-blue: #0595d3; /* Color específico solicitado */
+  --kikko-red: #dc3545; /* 485 C aproximado */
+  --kikko-yellow: #ffd700; /* 830 C aproximado */
+  --kikko-blue-light: #3baee9;
+  --kikko-blue-dark: #047bb8;
+  --kikko-red-light: #e74c3c;
+  --kikko-red-dark: #c0392b;
+  --kikko-yellow-light: #f4d03f;
+  --kikko-yellow-dark: #f1c40f;
+  
+  /* Nueva paleta Pantone para productos */
+  --pantone-orange: #FF7F00; /* P 20-8C */
+  --pantone-orange-light: #FF9933;
+  --pantone-orange-dark: #E6660A;
+  --pantone-black: #2C2C2C; /* P Process Black c */
+  --pantone-black-light: #404040;
+  --pantone-black-dark: #1A1A1A;
+  --pantone-yellow: #FFBA00; /* P 10-8C */
+  --pantone-yellow-light: #FFCC33;
+  --pantone-yellow-dark: #E6A600;
+  
+  /* Variable de gradiente personalizada */
+  --tw-gradient-to: #fff;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Colores Kikko disponibles en Tailwind */
+  --color-kikko-blue: var(--kikko-blue);
+  --color-kikko-red: var(--kikko-red);
+  --color-kikko-yellow: var(--kikko-yellow);
+  --color-kikko-blue-light: var(--kikko-blue-light);
+  --color-kikko-blue-dark: var(--kikko-blue-dark);
+  --color-kikko-red-light: var(--kikko-red-light);
+  --color-kikko-red-dark: var(--kikko-red-dark);
+  --color-kikko-yellow-light: var(--kikko-yellow-light);
+  --color-kikko-yellow-dark: var(--kikko-yellow-dark);
+  
+  /* Nueva paleta Pantone disponible en Tailwind */
+  --color-pantone-orange: var(--pantone-orange);
+  --color-pantone-orange-light: var(--pantone-orange-light);
+  --color-pantone-orange-dark: var(--pantone-orange-dark);
+  --color-pantone-black: var(--pantone-black);
+  --color-pantone-black-light: var(--pantone-black-light);
+  --color-pantone-black-dark: var(--pantone-black-dark);
+  --color-pantone-yellow: var(--pantone-yellow);
+  --color-pantone-yellow-light: var(--pantone-yellow-light);
+  --color-pantone-yellow-dark: var(--pantone-yellow-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Tipografía Acumin Variable Concept para Kikko */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+.font-acumin {
+  font-family: 'Acumin Variable Concept', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+.font-klein-bold {
+  font-family: 'Acumin Variable Concept', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 900; /* Extra Bold para títulos principales */
+  letter-spacing: 0.5px;
+}
+
+.font-klein {
+  font-family: 'Acumin Variable Concept', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400; /* Extra Bold para títulos principales */
+  letter-spacing: 0.5px;
+}
+
+.menu-kikko {
+  font-family: 'Acumin Variable Concept', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+/* Animaciones personalizadas para Kikko */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+}
+
+/* Nuevas animaciones para AboutKikko Timeline */
+@keyframes timeline-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(5, 149, 211, 0.3), 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(5, 149, 211, 0.5), 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes timeline-pulse-ring {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes timeline-float-bounce {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+}
+
+@keyframes timeline-rotate-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes timeline-card-lift {
+  0% {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.3);
+  }
+}
+
+@keyframes cooking-steam {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-30px) scale(1.2);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(-60px) scale(0.8);
+  }
+}
+
+/* Animaciones mejoradas para BrandValues cards */
+@keyframes card-glow {
+  0% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 40px rgba(5, 149, 211, 0.3);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+/* Nuevas animaciones para BrandValues mejorados */
+@keyframes brand-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+@keyframes brand-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes brand-wave {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+  }
+  50% {
+    transform: translateX(0%) scaleX(1);
+  }
+  100% {
+    transform: translateX(100%) scaleX(0);
+  }
+}
+
+@keyframes brand-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(5, 149, 211, 0.3), 0 0 40px rgba(5, 149, 211, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(5, 149, 211, 0.5), 0 0 60px rgba(5, 149, 211, 0.2);
+  }
+}
+
+@keyframes brand-sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-10px) scale(0.5) rotate(90deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-20px) scale(1) rotate(180deg);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-30px) scale(0.8) rotate(270deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-cooking-steam {
+  animation: cooking-steam 4s ease-in-out infinite;
+}
+
+.animate-card-glow {
+  animation: card-glow 4s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  background-size: 400% 400%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+.animate-text-reveal {
+  animation: text-reveal 0.6s ease-out forwards;
+}
+
+/* Clases para las nuevas animaciones del hero */
+.animate-hero-text-reveal {
+  animation: hero-text-reveal 1s ease-out forwards;
+}
+
+.animate-hero-text-reveal-delayed {
+  animation: hero-text-reveal-delayed 1s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-hero-text-reveal-final {
+  animation: hero-text-reveal-final 1.2s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+/* Clases para las nuevas animaciones del hero tipográfico */
+.animate-hero-slide-left {
+  animation: hero-slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-hero-slide-right {
+  animation: hero-slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-hero-text-glow {
+  animation: hero-text-glow-effect 3s ease-in-out infinite;
+}
+
+.animate-hero-yellow-glow {
+  animation: hero-yellow-glow 3s ease-in-out infinite;
+}
+
+.animate-hero-subtitle-fade {
+  animation: hero-subtitle-fade 0.8s ease-out forwards;
+}
+
+/* Animaciones específicas para el hero tipográfico columnar */
+@keyframes hero-slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) rotateY(-15deg);
+    filter: blur(3px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-20px) rotateY(-3deg);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes hero-slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) rotateY(15deg);
+    filter: blur(3px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(20px) rotateY(3deg);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes hero-text-glow-effect {
+  0%, 100% {
+    text-shadow: 
+      0 8px 32px rgba(0,0,0,0.9), 
+      0 4px 16px rgba(0,0,0,0.7),
+      0 0 40px rgba(255,255,255,0.1);
+  }
+  50% {
+    text-shadow: 
+      0 8px 32px rgba(0,0,0,0.9), 
+      0 4px 16px rgba(0,0,0,0.7),
+      0 0 60px rgba(255,255,255,0.2);
+  }
+}
+
+@keyframes hero-yellow-glow {
+  0%, 100% {
+    text-shadow: 
+      0 8px 32px rgba(0,0,0,0.9), 
+      0 4px 16px rgba(255,215,0,0.4),
+      0 0 40px rgba(255,215,0,0.3);
+  }
+  50% {
+    text-shadow: 
+      0 8px 32px rgba(0,0,0,0.9), 
+      0 4px 16px rgba(255,215,0,0.6),
+      0 0 60px rgba(255,215,0,0.5);
+  }
+}
+
+@keyframes hero-subtitle-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    filter: blur(2px);
+    letter-spacing: 0;
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(10px) scale(0.95);
+    filter: blur(1px);
+    letter-spacing: 0.1em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+    letter-spacing: 0.2em;
+  }
+}
+
+/* Animaciones para PageTransition */
+@keyframes page-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(10px) scale(0.98);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes page-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-10px) scale(1.02);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(1.05);
+    filter: blur(8px);
+  }
+}
+
+@keyframes page-overlay-gradient {
+  0% {
+    opacity: 0.3;
+    background-position: 0% 50%;
+  }
+  50% {
+    opacity: 0.1;
+    background-position: 100% 50%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 200% 50%;
+  }
+}
+
+/* Animaciones simplificadas para LoadingScreen limpio - compatibilidad */
+@keyframes loading-particle-gentle-float {
+  0%, 100% {
+    transform: translateY(0px) scale(0.8);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes loading-logo-bounce-clean {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  30% {
+    transform: translateY(-25px) scale(1.06);
+  }
+  50% {
+    transform: translateY(0px) scale(1);
+  }
+  70% {
+    transform: translateY(-12px) scale(1.03);
+  }
+}
+
+@keyframes loading-progress-simple-shine {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(450px);
+    opacity: 0;
+  }
+}
+
+@keyframes loading-aura-breathe {
+  0%, 100% {
+    transform: scale(1.3);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.7);
+    opacity: 0.3;
+  }
+}
+
+@keyframes loading-progress-pulse-end {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes loading-indicator-sync {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes loading-3d-rotate {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: rotateY(5deg) rotateX(2deg);
+  }
+  50% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  75% {
+    transform: rotateY(-5deg) rotateX(-2deg);
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+}
+
+@keyframes kikko-gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Clases para animaciones de carga mejoradas */
+.animate-loading-particle-gentle-float {
+  animation: loading-particle-gentle-float 3s ease-in-out infinite;
+}
+
+.animate-loading-logo-bounce-clean {
+  animation: loading-logo-bounce-clean 2.2s ease-in-out infinite;
+}
+
+.animate-loading-progress-simple-shine {
+  animation: loading-progress-simple-shine 2s ease-in-out infinite;
+}
+
+.animate-loading-aura-breathe {
+  animation: loading-aura-breathe 4s ease-in-out infinite;
+}
+
+.animate-loading-progress-pulse-end {
+  animation: loading-progress-pulse-end 1.5s ease-in-out infinite;
+}
+
+.animate-loading-indicator-sync {
+  animation: loading-indicator-sync 2s ease-in-out infinite;
+}
+
+.animate-loading-3d-rotate {
+  animation: loading-3d-rotate 5s ease-in-out infinite;
+}
+
+/* Clases para transiciones de página */
+.animate-page-fade-in {
+  animation: page-fade-in 0.8s ease-out forwards;
+}
+
+.animate-page-fade-out {
+  animation: page-fade-out 0.5s ease-in forwards;
+}
+
+.animate-page-overlay-gradient {
+  animation: page-overlay-gradient 1s ease-out forwards;
+}
+
+/* Estilos para prevenir scroll durante loading */
+.loading-no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+/* Prevenir scroll horizontal de manera sutil */
+html, body {
+  overflow-x: hidden;
+  /* Fondo culinario fijo para toda la aplicación */
+  background-image: url('https://mybucketkikko.s3.us-east-1.amazonaws.com/mesa_verduras.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Optimización para mobile - background attachment */
+@media (max-width: 768px) {
+  html, body {
+    background-attachment: scroll; /* Mejor performance en mobile */
+  }
+}
+
+/* Elementos que pueden salirse del viewport */
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Mejoras para el loading screen - fondo amarillo Kikko */
+.loading-screen-background {
+  background: #ffd700; /* Fondo amarillo Kikko */
+}
+
+/* Animación específica para la botella apareciendo desde abajo */
+@keyframes bottle-rise-up {
+  0% {
+    transform: translateY(200px) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animación del mask-image para revelar la botella gradualmente - Simplificada para mejor performance */
+@keyframes kikko-bottle-mask-reveal {
+  0% {
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 0%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 0%);
+  }
+  10% {
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 10%, transparent 12%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 10%, transparent 12%);
+  }
+  25% {
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 25%, transparent 30%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 25%, transparent 30%);
+  }
+  50% {
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, transparent 60%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, transparent 60%);
+  }
+  75% {
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 75%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 75%, transparent 90%);
+  }
+  90% {
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 90%, transparent 108%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 90%, transparent 108%);
+  }
+  100% {
+    mask-image: linear-gradient(to top, rgba(0,0,0,1) 100%, transparent 120%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 100%, transparent 120%);
+  }
+}
+
+.animate-bottle-rise-up {
+  animation: bottle-rise-up 1.2s ease-out forwards;
+}
+
+/* Efectos limpios para el logo real de Kikko */
+.loading-kikko-logo {
+  position: relative;
+  overflow: visible; /* Permitir que las sombras se vean */
+}
+
+/* Eliminar efectos complejos para diseño limpio */
+.loading-kikko-logo::before,
+.loading-kikko-logo::after {
+  display: none;
+}
+
+/* Estilos para el contador de progreso */
+@keyframes progress-counter-glow {
+  0%, 100% {
+    color: var(--kikko-blue);
+    text-shadow: 0 0 10px rgba(5, 149, 211, 0.3);
+  }
+  50% {
+    color: var(--kikko-yellow-dark);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  }
+}
+
+.progress-counter {
+  animation: progress-counter-glow 2s ease-in-out infinite;
+}
+
+/* Estilos para el contador del loading screen - kikko-counter-negro */
+.kikko-counter-negro {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #2c2c2c; /* Tono medio negro del contenido de la botella - COLOR FIJO */
+  font-family: 'Raleway', 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -3px;
+  line-height: 4rem;
+  display: inline-block;
+  /* Sin animación de colores - solo color negro fijo */
+}
+
+/* Mejoras responsivas para loading screen simplificado */
+@media (max-width: 1023px) {
+  .loading-kikko-logo {
+    padding: 2rem;
+  }
+  
+  /* Ajustar tamaño de partículas en tablet */
+  .loading-screen-particles {
+    transform: scale(0.8);
+  }
+  
+  /* Progress bar más ancho en tablet - MÁS ALTO */
+  .loading-progress-container {
+    width: 600px !important;
+    max-width: 85vw !important;
+  }
+  
+  /* Progress bar rectangular en tablet */
+  .loading-progress-container > div > div {
+    height: 10px !important;
+    border-radius: 6px !important;
+  }
+  
+  /* Contador responsivo en tablet */
+  .kikko-loading-counter {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .kikko-counter-negro {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+}
+
+/* Solo estilos móviles/tablet pequeño - NO AFECTA TABLET GRANDE */
+@media (max-width: 768px) {
+  .productos-banner-text-mobile {
+    bottom: 16% !important;
+    max-width: 85% !important;
+  }
+  
+  .productos-banner-products .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 450px !important;
+    padding: 0 1.5rem !important;
+  }
+  
+  .productos-banner-products {
+    top: 50% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .productos-banner-text-mobile {
+    bottom: 14% !important;
+    max-width: 90% !important;
+  }
+  
+  .productos-banner-products .grid {
+    max-width: 380px !important;
+    gap: 1.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-banner-text-mobile {
+    bottom: 12% !important;
+    max-width: 95% !important;
+  }
+  
+  .productos-banner-products .grid {
+    max-width: 320px !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Animaciones para tooltip Kikko */
+@keyframes tooltip-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tooltip-slide-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+}
+
+/* Estilo personalizado para tooltip Kikko */
+.tooltip-kikko {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #fef9e7 100%) !important;
+  border: 2px solid #ffd700 !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+  margin-top: 4px !important; /* Margen de separación del botón */
+  animation: tooltip-slide-down 0.2s ease-out;
+  transform-origin: top center;
+}
+
+/* Estilos especiales para el botón de cerrar modal */
+.modal-close-button {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+}
+
+/* Animación sutil para el botón de cerrar */
+@keyframes close-button-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(239, 68, 68, 0.2);
+  }
+}
+
+.close-button-attention {
+  animation: close-button-pulse 3s ease-in-out infinite;
+}
+
+/* Estilos responsivos para el botón de cerrar modal */
+@media (max-width: 768px) {
+  .modal-close-button {
+    top: 16px !important;
+    right: 16px !important;
+    min-width: 64px !important;
+    min-height: 64px !important;
+    padding: 20px !important;
+  }
+  
+  .modal-close-button .lucide {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-close-button {
+    top: 12px !important;
+    right: 12px !important;
+    min-width: 72px !important;
+    min-height: 72px !important;
+    padding: 24px !important;
+  }
+  
+  .modal-close-button .lucide {
+    width: 36px !important;
+    height: 36px !important;
+    stroke-width: 3 !important;
+  }
+}
+
+/* Animación de salida */
+.tooltip-kikko[data-state="closed"] {
+  animation: tooltip-slide-up 0.15s ease-in;
+}
+
+.tooltip-kikko::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffd700;
+  z-index: 42;
+}
+
+.tooltip-kikko::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fef9e7;
+  z-index: 43;
+}
+
+/* Scrollbar personalizado para el modal RecipePreview estilo Kikko */
+.kikko-custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--kikko-blue) #f1f5f9;
+  scroll-behavior: smooth;
+}
+
+.kikko-custom-scroll::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+
+.kikko-custom-scroll::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 6px;
+  margin: 8px 0;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.kikko-custom-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--kikko-blue) 0%, var(--kikko-blue-dark) 100%);
+  border-radius: 6px;
+  border: 2px solid #f8fafc;
+  box-shadow: 0 2px 8px rgba(5, 149, 211, 0.3);
+  transition: all 0.3s ease;
+}
+
+.kikko-custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--kikko-blue-light) 0%, var(--kikko-blue) 100%);
+  border-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(5, 149, 211, 0.4);
+  transform: scale(1.1);
+}
+
+.kikko-custom-scroll::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, var(--kikko-blue-dark) 0%, var(--kikko-blue) 100%);
+  box-shadow: 0 2px 6px rgba(5, 149, 211, 0.5);
+}
+
+.kikko-custom-scroll::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Efectos adicionales para el scrollbar */
+@keyframes kikko-scroll-glow {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(5, 149, 211, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(5, 149, 211, 0.5);
+  }
+}
+
+.kikko-custom-scroll::-webkit-scrollbar-thumb {
+  animation: kikko-scroll-glow 3s ease-in-out infinite;
+}
+
+/* Mejorar el botón de cerrar modal */
+.kikko-close-button-enhanced {
+  position: fixed !important;
+  top: 24px !important;
+  right: 24px !important;
+  z-index: 2147483647 !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%) !important;
+  border: 3px solid transparent !important;
+  border-radius: 50% !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 4px 16px rgba(5, 149, 211, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.kikko-close-button-enhanced::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--kikko-blue), var(--kikko-yellow), var(--kikko-red), var(--kikko-blue));
+  background-size: 300% 300%;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.kikko-close-button-enhanced:hover::before {
+  opacity: 1;
+}
+
+.kikko-close-button-enhanced:hover {
+  transform: scale(1.1) rotate(90deg) !important;
+  background: linear-gradient(135deg, #ffffff 0%, var(--kikko-red) 100%) !important;
+  color: white !important;
+  box-shadow: 
+    0 12px 40px rgba(220, 53, 69, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 0 0 4px rgba(220, 53, 69, 0.2) !important;
+}
+
+.kikko-close-button-enhanced:active {
+  transform: scale(0.95) rotate(90deg) !important;
+}
+
+/* Estilos responsivos para el botón mejorado */
+@media (max-width: 768px) {
+  .kikko-close-button-enhanced {
+    top: 20px !important;
+    right: 20px !important;
+    min-width: 70px !important;
+    min-height: 70px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .kikko-close-button-enhanced {
+    top: 16px !important;
+    right: 16px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+  }
+}
+
+/* Header - Menú móvil moderno */
+@keyframes mobile-menu-shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes mobile-menu-card-glow {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 12px 35px rgba(255, 215, 0, 0.2), 0 0 25px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes mobile-menu-icon-bounce {
+  0%, 100% {
+    transform: scale(1) rotateZ(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotateZ(5deg);
+  }
+  50% {
+    transform: scale(1.05) rotateZ(0deg);
+  }
+  75% {
+    transform: scale(1.1) rotateZ(-5deg);
+  }
+}
+
+@keyframes mobile-menu-cta-pulse {
+  0%, 100% {
+    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
+  }
+}
+
+/* Clases para el menú móvil */
+.animate-mobile-menu-shimmer {
+  animation: mobile-menu-shimmer 2s ease-in-out infinite;
+}
+
+.animate-mobile-menu-card-glow {
+  animation: mobile-menu-card-glow 3s ease-in-out infinite;
+}
+
+.animate-mobile-menu-icon-bounce {
+  animation: mobile-menu-icon-bounce 2s ease-in-out infinite;
+}
+
+.animate-mobile-menu-cta-pulse {
+  animation: mobile-menu-cta-pulse 2s ease-in-out infinite;
+}
+
+/* Efecto glassmorphism mejorado para menú móvil */
+.mobile-menu-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects especiales para cards del menú móvil */
+.mobile-menu-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 25px rgba(255, 215, 0, 0.2);
+}
+
+.mobile-menu-card-hover:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+/* Estilos para prevenir scroll cuando el menú móvil está abierto */
+.mobile-menu-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Gradiente animado para el background del menú móvil */
+.mobile-menu-bg-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 149, 211, 0.95) 0%,
+    rgba(5, 149, 211, 0.98) 25%,
+    rgba(2, 120, 174, 0.96) 50%,
+    rgba(5, 149, 211, 0.98) 75%,
+    rgba(2, 120, 174, 0.95) 100%
+  );
+  background-size: 100% 300%;
+  animation: mobile-menu-bg-flow 8s ease infinite;
+}
+
+@keyframes mobile-menu-bg-flow {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Efectos especiales para iconos del menú móvil */
+.mobile-menu-icon-glow {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-icon-glow:hover {
+  filter: drop-shadow(0 6px 12px rgba(255, 215, 0, 0.4)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transform: scale(1.1);
+}
+
+/* Scroll suave para el contenido del menú móvil */
+.mobile-menu-scroll {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 215, 0, 0.5) transparent;
+}
+
+.mobile-menu-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobile-menu-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mobile-menu-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.5);
+  border-radius: 2px;
+}
+
+.mobile-menu-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.7);
+}
+
+/* Responsividad específica para el menú móvil */
+@media (max-width: 480px) {
+  .mobile-menu-card-hover:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+  
+  .mobile-menu-icon-glow:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Reduced motion para el menú móvil */
+@media (prefers-reduced-motion: reduce) {
+  .animate-mobile-menu-shimmer,
+  .animate-mobile-menu-card-glow,
+  .animate-mobile-menu-icon-bounce,
+  .animate-mobile-menu-cta-pulse,
+  .mobile-menu-bg-gradient {
+    animation: none;
+  }
+  
+  .mobile-menu-card-hover,
+  .mobile-menu-icon-glow {
+    transition: none;
+  }
+  
+  .mobile-menu-card-hover:hover,
+  .mobile-menu-icon-glow:hover {
+    transform: none;
+    filter: none;
+  }
+}
+
+/* Flechas de navegación Kikko personalizadas para ProductDetailPageV2 */
+.kikko-nav-button {
+  min-width: 60px;
+  min-height: 80px;
+}
+
+.kikko-nav-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--kikko-blue-light), var(--kikko-blue), var(--kikko-blue-dark), var(--kikko-blue-light));
+  background-size: 300% 300%;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: kikko-gradient-rotate 4s ease infinite;
+}
+
+.kikko-nav-button:hover::before {
+  opacity: 0.8;
+}
+
+.kikko-nav-button:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 
+    0 12px 40px rgba(5, 149, 211, 0.6),
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.kikko-nav-button:active {
+  transform: scale(0.95) !important;
+}
+
+/* Animación específica para las flechas Kikko */
+@keyframes kikko-nav-pulse {
+  0%, 100% {
+    box-shadow: 0 8px 32px rgba(5, 149, 211, 0.4), inset 0 1px 0 rgba(59, 174, 233, 0.2);
+  }
+  50% {
+    box-shadow: 0 12px 40px rgba(5, 149, 211, 0.6), inset 0 1px 0 rgba(59, 174, 233, 0.3);
+  }
+}
+
+.kikko-nav-button {
+  animation: kikko-nav-pulse 3s ease-in-out infinite;
+}
+
+/* Efectos especiales para los puntos decorativos */
+@keyframes kikko-dot-glow {
+  0%, 100% {
+    background: var(--kikko-blue-light);
+    box-shadow: 0 0 8px rgba(59, 174, 233, 0.6);
+  }
+  50% {
+    background: var(--kikko-blue);
+    box-shadow: 0 0 12px rgba(5, 149, 211, 0.8);
+  }
+}
+
+.kikko-nav-button .bg-kikko-blue-light {
+  animation: kikko-dot-glow 2s ease-in-out infinite;
+}
+
+/* Responsividad para las flechas Kikko */
+@media (max-width: 768px) {
+  .kikko-nav-button {
+    padding: 12px !important;
+    min-width: 50px !important;
+    min-height: 70px !important;
+  }
+  
+  .kikko-nav-button .w-6.h-6,
+  .kikko-nav-button .w-7.h-7,
+  .kikko-nav-button .w-8.h-8 {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .kikko-nav-button {
+    padding: 10px !important;
+    min-width: 45px !important;
+    min-height: 60px !important;
+  }
+  
+  .kikko-nav-button .w-6.h-6,
+  .kikko-nav-button .w-7.h-7,
+  .kikko-nav-button .w-8.h-8 {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+/* Alturas personalizadas para productos */
+.h-76 {
+  height: 19rem; /* 304px */
+}
+
+/* Altura específica para banner completo - 200vh para AboutKikkoPage */
+.h-banner-full {
+  height: 200vh !important;
+}
+
+.min-h-banner-full {
+  min-height: 200vh !important;
+}
+
+/* Alturas que consideran el header - 100vh menos altura del header */
+.h-screen-minus-header {
+  height: calc(100vh - 80px) !important; /* Desktop: header ~80px */
+}
+
+.min-h-screen-minus-header {
+  min-height: calc(100vh - 80px) !important;
+}
+
+/* Responsive para diferentes alturas de header */
+@media (max-width: 1023px) {
+  .h-screen-minus-header {
+    height: calc(100vh - 75px) !important; /* Tablet: header ~75px */
+  }
+  
+  .min-h-screen-minus-header {
+    min-height: calc(100vh - 75px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .h-screen-minus-header {
+    height: calc(100vh - 70px) !important; /* Mobile grande: header ~70px */
+  }
+  
+  .min-h-screen-minus-header {
+    min-height: calc(100vh - 70px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .h-screen-minus-header {
+    height: calc(100vh - 65px) !important; /* Mobile pequeño: header ~65px */
+  }
+  
+  .min-h-screen-minus-header {
+    min-height: calc(100vh - 65px) !important;
+  }
+}
+
+/* Variante para cuando se quiere pantalla completa exacta */
+.h-screen-exact {
+  height: 100vh !important;
+}
+
+.min-h-screen-exact {
+  min-height: 100vh !important;
+}
+
+/* Para secciones que necesitan compensar el header automáticamente */
+.section-full-height {
+  min-height: calc(110vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .section-full-height {
+    min-height: calc(100vh - 75px);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-full-height {
+    min-height: calc(100vh - 70px);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-full-height {
+    min-height: calc(100vh - 65px);
+  }
+}
+
+/* Header - Logo responsive mejorado */
+.kikko-logo-responsive {
+  height: clamp(64px, 8vw, 80px); /* Tamaño responsive del logo */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tamaños específicos por breakpoint */
+@media (min-width: 1024px) {
+  .kikko-logo-responsive {
+    height: 64px; /* Desktop: tamaño estándar */
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  .kikko-logo-responsive {
+    height: 72px; /* Tablet: ligeramente más grande */
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .kikko-logo-responsive {
+    height: 80px; /* Mobile grande: más visible */
+  }
+}
+
+@media (max-width: 480px) {
+  .kikko-logo-responsive {
+    height: 88px; /* Mobile pequeño: máximo tamaño para mejor visibilidad */
+    max-width: 200px; /* Limitar ancho en pantallas muy pequeñas */
+  }
+}
+
+/* Efectos hover modernos para el logo */
+.kikko-logo-responsive:hover {
+  transform: scale(1.05) translateY(-2px);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4)) !important;
+}
+
+.kikko-logo-responsive:active {
+  transform: scale(0.98);
+}
+
+/* Animación especial para el logo */
+@keyframes kikko-logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 12px 30px rgba(255, 215, 0, 0.3)) drop-shadow(0 8px 20px rgba(0, 0, 0, 0.8));
+  }
+}
+
+/* Aplicar glow sutil cuando no hay scroll */
+.kikko-logo-responsive {
+  animation: kikko-logo-glow 4s ease-in-out infinite;
+}
+
+/* Detener animación en scroll para performance */
+.header-scrolled .kikko-logo-responsive {
+  animation: none;
+}
+
+/* Header - Layout mobile centrado */
+@media (max-width: 1023px) {
+  /* En mobile, el header tiene 3 zonas: logo izq, hamburger centro, espacio der */
+  .header-mobile-layout {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 1rem !important;
+  }
+  
+  .header-logo-mobile {
+    grid-column: 1 !important;
+    justify-self: start !important;
+  }
+  
+  .header-hamburger-mobile {
+    grid-column: 2 !important;
+    justify-self: center !important;
+  }
+  
+  .header-spacer-mobile {
+    grid-column: 3 !important;
+    justify-self: end !important;
+  }
+}
+
+/* Layout desktop normal */
+@media (min-width: 1024px) {
+  .header-mobile-layout {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  
+  .header-logo-mobile,
+  .header-hamburger-mobile,
+  .header-spacer-mobile {
+    grid-column: unset !important;
+    justify-self: unset !important;
+  }
+}
+
+/* Header - Efectos especiales para hamburger centrado */
+@keyframes hamburger-center-attention {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  75% {
+    transform: scale(1.05) rotate(-2deg);
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-hamburger-mobile .modern-hamburger-button {
+    position: relative;
+  }
+  
+  .header-hamburger-mobile .modern-hamburger-button::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .header-hamburger-mobile .modern-hamburger-button:hover::after {
+    opacity: 1;
+    animation: hamburger-center-attention 2s ease-in-out infinite;
+  }
+}
+
+/* Efecto de "breathing" para indicar que es interactivo */
+@keyframes hamburger-breathing {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2), 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-hamburger-mobile .modern-hamburger-button {
+    animation: hamburger-breathing 4s ease-in-out infinite;
+  }
+  
+  /* Pausa la animación cuando está abierto para evitar distracción */
+  .header-hamburger-mobile .modern-hamburger-button.open {
+    animation: none;
+  }
+}
+
+/* Header - Icono hamburguesa moderno */
+@keyframes hamburger-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes hamburger-glow {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Efectos específicos para el botón hamburguesa */
+.modern-hamburger-button {
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-hamburger-button:hover {
+  transform: scale(1.1) rotate(5deg);
+  animation: hamburger-glow 2s ease-in-out infinite;
+}
+
+.modern-hamburger-button:active {
+  transform: scale(0.95) rotate(-2deg);
+}
+
+.modern-hamburger-button.open {
+  animation: hamburger-bounce 0.6s ease-out;
+}
+
+/* Efecto de partículas alrededor del hamburger cuando está activo */
+.modern-hamburger-button.open::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background: linear-gradient(45deg, var(--kikko-yellow), transparent, var(--kikko-blue), transparent, var(--kikko-red), transparent) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  opacity: 0.6;
+  animation: hamburger-border-rotate 3s linear infinite;
+}
+
+@keyframes hamburger-border-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsividad específica para el icono hamburguesa */
+@media (max-width: 480px) {
+  .modern-hamburger-button {
+    padding: 12px !important;
+    min-width: 64px !important;
+    min-height: 64px !important;
+  }
+  
+  .modern-hamburger-button > div {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  
+  .modern-hamburger-button span {
+    width: 28px !important;
+    height: 3px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .modern-hamburger-button {
+    padding: 10px !important;
+    min-width: 56px !important;
+    min-height: 56px !important;
+  }
+  
+  .modern-hamburger-button > div {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .modern-hamburger-button span {
+    width: 24px !important;
+    height: 2.5px !important;
+  }
+}
+
+/* Reduced motion para hamburger */
+@media (prefers-reduced-motion: reduce) {
+  .modern-hamburger-button,
+  .modern-hamburger-button:hover,
+  .modern-hamburger-button.open,
+  .modern-hamburger-button.open::before {
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  .modern-hamburger-button:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* AboutKikkoPage - Indicador de Scroll Parallax */
+@keyframes scroll-indicator-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes scroll-indicator-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-line-scale {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes scroll-dot-travel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Clases para el indicador de scroll */
+.scroll-indicator-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scroll-indicator-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: scroll-indicator-pulse 2s ease-in-out infinite;
+}
+
+.scroll-indicator-mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: scroll-indicator-bounce 1.5s ease-in-out infinite;
+}
+
+.scroll-indicator-dot {
+  width: 4px;
+  height: 12px;
+  background: white;
+  border-radius: 2px;
+  margin-top: 8px;
+  animation: scroll-dot-travel 1.5s ease-in-out infinite;
+}
+
+.scroll-indicator-line {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
+  margin-top: 4px;
+  animation: scroll-line-scale 2s ease-in-out infinite;
+}
+
+/* Efectos hover para el indicador */
+.scroll-indicator-container:hover .scroll-indicator-text {
+  color: rgba(255, 215, 0, 0.9);
+  animation: none;
+}
+
+.scroll-indicator-container:hover .scroll-indicator-mouse {
+  border-color: rgba(255, 215, 0, 0.8);
+  transform: scale(1.1);
+  animation: none;
+}
+
+.scroll-indicator-container:hover .scroll-indicator-dot {
+  background: #ffd700;
+}
+
+/* Responsividad para el indicador de scroll */
+@media (max-width: 768px) {
+  .scroll-indicator-container {
+    bottom: 1.5rem;
+    gap: 0.25rem;
+  }
+  
+  .scroll-indicator-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .scroll-indicator-mouse {
+    width: 20px;
+    height: 32px;
+    border-radius: 10px;
+  }
+  
+  .scroll-indicator-dot {
+    width: 3px;
+    height: 8px;
+    margin-top: 6px;
+  }
+  
+  .scroll-indicator-line {
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-indicator-container {
+    bottom: 1rem;
+  }
+  
+  .scroll-indicator-text {
+    font-size: 0.6rem;
+  }
+  
+  .scroll-indicator-mouse {
+    width: 18px;
+    height: 28px;
+  }
+  
+  .scroll-indicator-dot {
+    width: 2px;
+    height: 6px;
+    margin-top: 4px;
+  }
+  
+  .scroll-indicator-line {
+    height: 20px;
+  }
+}
+
+/* Ocultar indicador cuando hay movimiento de scroll */
+.scroll-indicator-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+/* Efectos especiales para crear atmósfera */
+@keyframes scroll-ambient-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.2), 0 0 60px rgba(255, 215, 0, 0.1);
+  }
+}
+
+.scroll-indicator-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: scroll-ambient-glow 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* ProductDetailPageV2 - Indicadores del slider más pequeños en mobile */
+@media (max-width: 768px) {
+  /* Posicionamiento más cerca del borde en mobile */
+  .absolute.top-6.right-6 {
+    top: 1rem !important;
+    right: 1rem !important;
+  }
+  
+  /* Botones indicadores más pequeños */
+  .w-2.h-2 {
+    width: 6px !important;
+    height: 6px !important;
+    min-width: 6px !important;
+    min-height: 6px !important;
+  }
+  
+  /* Espaciado reducido entre indicadores */
+  .space-x-1\.5 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 4px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Aún más pequeños en mobile muy pequeño */
+  .w-2.h-2 {
+    width: 5px !important;
+    height: 5px !important;
+    min-width: 5px !important;
+    min-height: 5px !important;
+  }
+  
+  /* Espaciado mínimo entre indicadores */
+  .space-x-1\.5 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 3px !important;
+  }
+  
+  /* Posición más compacta */
+  .absolute.top-6.right-6 {
+    top: 0.75rem !important;
+    right: 0.75rem !important;
+  }
+}
+
+/* Efectos hover más sutiles para indicadores pequeños en mobile */
+@media (max-width: 768px) {
+  .w-2.h-2:hover {
+    transform: scale(1.2) !important;
+  }
+  
+  .w-2.h-2.scale-110 {
+    transform: scale(1.4) !important;
+  }
+}
+
+/* ProductDetailPageV2 - Imagen más grande en mobile */
+@media (max-width: 640px) {
+  /* Imagen del producto aún más grande en mobile */
+  .h-72 {
+    height: 20rem !important; /* 320px - más grande que h-72 normal */
+  }
+}
+
+@media (max-width: 480px) {
+  /* En mobile pequeño, imagen más grande */
+  .h-72 {
+    height: 18rem !important; /* 288px - ajustado para pantallas muy pequeñas */
+  }
+}
+
+
+
+/* Header - Estilos básicos */
+
+/* Hero - Animación de franja celeste barrido */
+@keyframes hero-stripe-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+.hero-stripe-animation {
+  animation: hero-stripe-sweep 1.5s ease-in-out infinite;
+  animation-delay: var(--stripe-delay, 0s);
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(5, 149, 211, 0.4) 25%, 
+    rgba(5, 149, 211, 0.8) 50%, 
+    rgba(5, 149, 211, 0.4) 75%, 
+    transparent 100%);
+  mix-blend-mode: overlay;
+}
+
+/* Hero - Texto blanco sólido sin efectos */
+.hero-text-solid-white {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  -webkit-text-stroke: none !important;
+  text-stroke: none !important;
+}
+
+
+
+/* Hero - Alineación de texto responsiva */
+@media (min-width: 1024px) {
+  .hero-text-align-responsive {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-text-align-responsive {
+    text-align: center !important;
+  }
+}
+
+/* Hero - Texto sin negrita para subtítulos */
+.hero-text-normal-weight {
+  font-family: 'Acumin Variable Concept', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400 !important; /* Normal weight en lugar de bold */
+  letter-spacing: 0.5px;
+}
+
+/* Hero - Alineación responsiva: izquierda en desktop, top debajo del header en mobile */
+@media (max-width: 1023px) {
+  .hero-text-right-responsive {
+    position: absolute !important;
+    top: 6rem !important; /* Debajo del header mobile (aprox 96px) */
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: calc(100% - 6rem) !important; /* Altura restante después del header */
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* CAMBIO: de center a flex-start */
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 2rem !important; /* LIMPIADO: solo padding horizontal */
+  }
+  
+  .hero-container-responsive {
+    justify-content: center !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  
+  /* Sombra adicional centrada para mobile/tablet */
+  .hero-container-responsive::before {
+    content: '';
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 60%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%);
+    z-index: 5;
+    pointer-events: none;
+  }
+}
+
+/* Desktop: texto a la izquierda */
+@media (min-width: 1024px) {
+  .hero-text-right-responsive {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 50% !important;
+    height: 100% !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 2rem !important;
+  }
+  
+  .hero-container-responsive {
+    justify-content: flex-start !important;
+    padding-left: 4rem !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Ajustes específicos para mobile pequeño */
+@media (max-width: 768px) {
+  .hero-text-right-responsive {
+    top: 5.5rem !important; /* Ajuste más preciso para mobile */
+    padding: 0 1.5rem !important; /* LIMPIADO: solo padding horizontal */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-right-responsive {
+    top: 5rem !important; /* Header más compacto en mobile pequeño */
+    padding: 0 1rem !important; /* LIMPIADO: solo padding horizontal */
+  }
+}
+
+/* Clase específica para el contenedor de textos del hero en mobile */
+@media (max-width: 1023px) {
+  .hero-text-container-mobile {
+    padding-top: 30px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* RecipesPageV2 - Banner estilo blog culinario */
+.recipe-hero-blog-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+@media (min-width: 1024px) {
+  .recipe-hero-blog-layout {
+    padding: 0;
+  }
+}
+
+/* Imagen del plato principal */
+.recipe-hero-image {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Controles de navegación del hero */
+.recipe-hero-nav-button {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.recipe-hero-nav-button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Indicadores del hero */
+.recipe-hero-indicator {
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.recipe-hero-indicator.active {
+  background: var(--kikko-yellow);
+  transform: scaleX(2);
+}
+
+.recipe-hero-indicator.inactive {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Similar recipes thumbnails */
+.similar-recipe-thumb {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.similar-recipe-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.similar-recipe-thumb::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--kikko-blue), var(--kikko-yellow), var(--kikko-red));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.similar-recipe-thumb:hover::after {
+  opacity: 0.8;
+}
+
+/* Rating estrellas */
+.recipe-rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.recipe-rating-star {
+  transition: all 0.2s ease;
+}
+
+.recipe-rating-star:hover {
+  transform: scale(1.2);
+}
+
+/* Animaciones específicas del hero blog */
+@keyframes recipe-hero-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes recipe-hero-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.recipe-hero-animate-in {
+  animation: recipe-hero-fade-in 0.8s ease-out;
+}
+
+.recipe-hero-animate-slide {
+  animation: recipe-hero-slide-in 0.8s ease-out;
+}
+
+/* Responsive específico para mobile hero */
+@media (max-width: 1023px) {
+  .recipe-hero-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .recipe-hero-content {
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .similar-recipe-thumb {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .recipe-hero-image {
+    max-width: 350px;
+  }
+  
+  .similar-recipe-thumb {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* ProductosPage - Banner responsive UNIFICADO - Tablet y Mobile iguales */
+
+/* Breakpoint unificado para tablet y mobile (1023px y menor) */
+@media (max-width: 1023px) {
+  .productos-banner-text-left {
+    display: none !important;
+  }
+  
+  .productos-banner-text-right {
+    display: none !important;
+  }
+  
+  .productos-banner-text-mobile {
+    display: block !important;
+    position: absolute !important;
+    bottom: 18% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    max-width: 80% !important;
+    z-index: 25 !important;
+  }
+  
+  .productos-banner-products .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    max-width: 450px !important;
+    padding: 0 1.5rem !important;
+  }
+  
+  .productos-banner-products {
+    top: 50% !important;
+    left: 50% !important; /* Centrar horizontalmente */
+    transform: translateX(-50%) translateY(-50%) !important; /* Centrar en ambos ejes */
+    width: 700px !important; /* Ancho específico para coincidir con góndola */
+    max-width: 700px !important; /* Máximo ancho del contenedor flex */
+  }
+  
+  .productos-banner-products .grid {
+    gap: 0.5rem !important; /* Gap mínimo en desktop */
+    max-width: 100% !important; /* Usar todo el ancho del contenedor padre */
+    width: 100% !important; /* Asegurar que use todo el ancho disponible */
+  }
+}
+
+/* ProductDetailPageV2 - Nombre del producto en una sola línea */
+.product-name-single-line {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  display: block !important;
+  font-size: 6rem !important; /* Tamaño base más grande - text-6xl */
+  line-height: 1 !important;
+}
+
+/* Contenedor del nombre del producto */
+.product-name-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Desktop: Alineación izquierda y tamaño aumentado */
+@media (min-width: 1024px) {
+  .product-name-single-line {
+    text-align: left !important;
+    font-size: 6.5rem !important; /* Aún más grande en desktop */
+  }
+  
+  .product-name-container {
+    justify-content: flex-start !important;
+  }
+}
+
+/* Mobile y Tablet: Centrado */
+@media (max-width: 1023px) {
+  .product-name-single-line {
+    text-align: center !important;
+  }
+  
+  .product-name-container {
+    justify-content: center !important;
+  }
+}
+
+/* Responsividad específica para el nombre del producto */
+@media (max-width: 1200px) {
+  .product-name-single-line {
+    font-size: 5.5rem !important; /* xl:text-5xl equivalente */
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-name-single-line {
+    font-size: 4.5rem !important; /* lg:text-5xl equivalente */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-name-single-line {
+    font-size: 3rem !important; /* md:text-5xl equivalente */
+  }
+}
+
+@media (max-width: 640px) {
+  .product-name-single-line {
+    font-size: 4.25rem !important; /* MODIFICADO: 4.25rem en mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-name-single-line {
+    font-size: 1.875rem !important; /* text-3xl equivalente */
+  }
+}
+
+@media (max-width: 360px) {
+  .product-name-single-line {
+    font-size: 1.5rem !important; /* text-2xl equivalente */
+  }
+}
+
+/* ProductDetailPageV2 - Título principal en una línea */
+.product-detail-v2-title {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  display: block !important;
+  font-size: 3rem !important; /* Tamaño base grande */
+  line-height: 1.1 !important;
+}
+
+/* Contenedor del título */
+.product-detail-v2-title-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Responsividad mejorada para el título en una línea */
+@media (max-width: 1200px) {
+  .product-detail-v2-title {
+    font-size: 2.5rem !important; /* xl:text-4xl */
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-detail-v2-title {
+    font-size: 2rem !important; /* lg:text-3xl */
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-v2-title {
+    font-size: 1.5rem !important; /* md:text-2xl */
+    line-height: 1.25 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-detail-v2-title {
+    font-size: 1.25rem !important; /* sm:text-xl */
+    line-height: 1.25 !important;
+    letter-spacing: 0.025em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-v2-title {
+    font-size: 1rem !important; /* text-lg */
+    line-height: 1.25 !important;
+    letter-spacing: 0.05em !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .product-detail-v2-title {
+    font-size: 0.875rem !important; /* text-base */
+    line-height: 1.25 !important;
+    letter-spacing: 0.1em !important;
+  }
+}
+
+/* ProductDetailPage - Distribución de contenido mejorada en tablet y mobile */
+
+/* Hero section - evitar solapamiento con header */
+@media (max-width: 1023px) {
+  .product-detail-hero-content {
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  /* Grid más compacto en tablet */
+  .product-detail-hero-grid {
+    gap: 2rem !important;
+    min-height: 100vh !important; /* CORREGIDO: Sin restar padding */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ordenar contenido en mobile: texto arriba, imagen abajo */
+  .product-detail-hero-grid {
+    gap: 1.5rem !important;
+    min-height: 100vh !important; /* CORREGIDO: Sin restar padding */
+  }
+  
+  /* Imagen del producto más pequeña en mobile */
+  .product-detail-hero-image {
+    order: 2 !important;
+    margin-top: 1rem !important;
+  }
+  
+  /* Información del producto arriba en mobile */
+  .product-detail-hero-info {
+    order: 1 !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-hero-grid {
+    gap: 1rem !important;
+    min-height: 100vh !important; /* CORREGIDO: Sin restar padding */
+  }
+}
+
+/* Títulos responsivos para ProductDetail */
+@media (max-width: 1023px) {
+  .product-detail-title {
+    font-size: clamp(2rem, 6vw, 3.5rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .product-detail-subtitle {
+    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .product-detail-subtitle {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem) !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Badges más compactos en mobile */
+@media (max-width: 768px) {
+  .product-detail-badges {
+    gap: 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .product-detail-badges .badge {
+    font-size: 0.7rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  
+  /* Mostrar solo los primeros 2 badges en mobile */
+  .product-detail-badges .badge:nth-child(n+3) {
+    display: none !important;
+  }
+}
+
+/* Features grid más compacto en mobile */
+@media (max-width: 768px) {
+  .product-detail-features {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .product-detail-features .feature-item {
+    padding: 0.75rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  /* Mostrar solo 2 features en mobile en lugar de 4 */
+  .product-detail-features .feature-item:nth-child(n+3) {
+    display: none !important;
+  }
+}
+
+/* Botón volver más compacto en mobile */
+@media (max-width: 768px) {
+  .product-detail-back-button {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.8rem !important;
+    margin-top: 1rem !important;
+  }
+}
+
+/* Imagen del producto responsiva */
+@media (max-width: 1023px) {
+  .product-detail-bottle-image {
+    height: clamp(250px, 40vw, 400px) !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-bottle-image {
+    height: clamp(200px, 35vw, 300px) !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-bottle-image {
+    height: clamp(180px, 30vw, 250px) !important;
+  }
+}
+
+/* Espaciado vertical mejorado para evitar solapamientos */
+@media (max-width: 1023px) {
+  .product-detail-content-spacing {
+    padding: 2rem 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-content-spacing {
+    padding: 1.5rem 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-content-spacing {
+    padding: 1rem 0 !important;
+  }
+}
+
+/* ProductDetailPage - Layout centrado en columna para tablet y desktop */
+
+/* Layout correcto: 2 columnas en desktop, 1 columna en tablet/mobile */
+
+/* Desktop: Mantener 2 columnas lado a lado */
+@media (min-width: 1024px) {
+  .product-detail-hero-grid {
+    grid-template-columns: 1fr 1fr !important; /* DOS columnas en desktop */
+    max-width: 1200px !important; /* Ancho máximo para desktop */
+    margin: 0 auto !important;
+    gap: 4rem !important;
+    align-items: center !important;
+    justify-items: center !important;
+  }
+  
+  /* Imagen a la izquierda en desktop */
+  .product-detail-hero-image {
+    order: 0 !important; /* Orden normal - izquierda */
+    width: 100% !important;
+    justify-self: center !important;
+  }
+  
+  /* Información a la derecha en desktop */
+  .product-detail-hero-info {
+    order: 0 !important; /* Orden normal - derecha */
+    width: 100% !important;
+    max-width: 600px !important;
+    text-align: left !important; /* Alineación izquierda en desktop */
+    justify-self: start !important;
+  }
+}
+
+/* Tablet Y Mobile: Una sola columna centrada - UNIFICADO */
+@media (max-width: 1023px) {
+  .product-detail-hero-grid {
+    grid-template-columns: 1fr !important; /* UNA sola columna */
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    gap: 3rem !important;
+    justify-items: center !important;
+  }
+  
+  /* Imagen arriba en tablet y mobile */
+  .product-detail-hero-image {
+    order: 1 !important;
+    width: 100% !important;
+    justify-self: center !important;
+  }
+  
+  /* Información abajo en tablet y mobile */
+  .product-detail-hero-info {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 600px !important;
+    text-align: center !important;
+    justify-self: center !important;
+  }
+}
+
+/* Ajustes específicos para mobile - gap menor */
+@media (max-width: 767px) {
+  .product-detail-hero-grid {
+    gap: 2rem !important; /* Gap menor en mobile */
+    max-width: 100% !important; /* Usar todo el ancho en mobile */
+  }
+  
+  .product-detail-hero-info {
+    max-width: 90% !important; /* Más ancho en mobile */
+  }
+}
+
+/* Alineación específica para desktop */
+@media (min-width: 1024px) {
+  .product-detail-title,
+  .product-detail-subtitle {
+    text-align: left !important; /* Izquierda en desktop */
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  
+  .product-detail-badges {
+    justify-content: flex-start !important; /* Izquierda en desktop */
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  
+  .product-detail-features {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-items: start !important; /* Izquierda en desktop */
+  }
+  
+  .product-detail-features .feature-item {
+    width: 100% !important;
+    text-align: left !important; /* Izquierda en desktop */
+  }
+  
+  .product-detail-back-button {
+    margin-left: 0 !important; /* Izquierda en desktop */
+    margin-right: auto !important;
+    display: inline-block !important;
+    width: fit-content !important;
+  }
+}
+
+/* Centrar elementos en tablet Y mobile - UNIFICADO */
+@media (max-width: 1023px) {
+  .product-detail-title,
+  .product-detail-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .product-detail-badges {
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .product-detail-features {
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-items: center !important;
+  }
+  
+  .product-detail-features .feature-item {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .product-detail-back-button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    width: fit-content !important;
+  }
+}
+
+/* Imagen del producto responsiva con tamaños apropiados */
+@media (min-width: 1024px) {
+  .product-detail-bottle-image {
+    height: clamp(400px, 35vw, 550px) !important; /* Más grande en desktop */
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/* Tablet: tamaño medio */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product-detail-bottle-image {
+    height: clamp(350px, 40vw, 500px) !important; /* Tamaño medio en tablet */
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/* Mobile: imagen más grande que antes */
+@media (max-width: 767px) {
+  .product-detail-bottle-image {
+    height: clamp(280px, 50vw, 420px) !important; /* MÁS GRANDE en mobile */
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/* ProductDetailPage - Ajuste específico para .product-detail-hero-image en tablet y mobile */
+@media (max-width: 1023px) {
+  .product-detail-hero-image {
+    margin-top: 5rem !important;
+  }
+}
+
+/* ProductDetailPage - Título de productos en mayúsculas */
+.product-detail-title {
+  text-transform: uppercase !important;
+}
+
+/* Mobile: títulos más compactos */
+@media (max-width: 767px) {
+  .product-detail-title {
+    font-size: clamp(1.6rem, 8vw, 2.8rem) !important; /* Ligeramente más pequeño */
+    margin-bottom: 0.5rem !important; /* Menos margen */
+  }
+  
+  .product-detail-subtitle {
+    font-size: clamp(0.8rem, 4vw, 1.1rem) !important; /* Más compacto */
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Features más compactos en mobile - menos elementos */
+@media (max-width: 767px) {
+  .product-detail-features {
+    max-width: 400px !important;
+    margin-bottom: 1rem !important; /* Menos margen */
+  }
+  
+  .product-detail-features .feature-item {
+    padding: 0.5rem !important; /* Padding reducido */
+    font-size: 0.75rem !important; /* Texto más pequeño */
+  }
+  
+  /* Mostrar solo 2 features en mobile en lugar de 4 */
+  .product-detail-features .feature-item:nth-child(n+3) {
+    display: none !important;
+  }
+}
+
+/* Badges más compactos en mobile */
+@media (max-width: 767px) {
+  .product-detail-badges {
+    gap: 0.3rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .product-detail-badges .badge {
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+  
+  /* Mostrar solo los primeros 2 badges en mobile */
+  .product-detail-badges .badge:nth-child(n+3) {
+    display: none !important;
+  }
+}
+
+/* Botón más compacto en mobile */
+@media (max-width: 767px) {
+  .product-detail-back-button {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.75rem !important;
+    margin-top: 0.75rem !important;
+  }
+}
+
+/* Hero - Animaciones básicas limpias */
+
+/* Animaciones para texto animado */
+@keyframes letter-glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px rgba(255, 215, 0, 0.5),
+      0 0 10px rgba(255, 215, 0, 0.3),
+      0 0 15px rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 10px rgba(255, 215, 0, 0.8),
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 30px rgba(255, 215, 0, 0.3);
+  }
+}
+
+@keyframes letter-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-8px) scale(1.05);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+  }
+  75% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@keyframes letter-wave {
+  0%, 100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotateZ(2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotateZ(-2deg);
+  }
+}
+
+@keyframes letter-typewriter {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes letter-fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Clases para animaciones de letras */
+.animate-letter-glow {
+  animation: letter-glow 2s ease-in-out infinite;
+}
+
+.animate-letter-bounce {
+  animation: letter-bounce 1s ease-out;
+}
+
+.animate-letter-wave {
+  animation: letter-wave 0.8s ease-in-out;
+}
+
+.animate-letter-typewriter {
+  animation: letter-typewriter 0.3s ease-out forwards;
+}
+
+.animate-letter-fade-in-up {
+  animation: letter-fade-in-up 0.6s ease-out forwards;
+}
+
+/* Efectos especiales para títulos animados */
+.animated-title {
+  background: linear-gradient(45deg, #0595d3, #ffd700, #dc3545, #0595d3);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.animated-title-glow {
+  text-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 0 40px rgba(255, 215, 0, 0.4),
+    0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ProductDetailPageV2 - Tags en una sola línea con selectores personalizados */
+.kikko-tags-single-line {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE y Edge */
+  scroll-behavior: smooth !important;
+  padding-bottom: 4px !important; /* Espacio para no cortar sombras */
+}
+
+.kikko-tags-single-line::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari y Opera */
+}
+
+/* Animaciones para tags seleccionados */
+@keyframes kikko-tag-glow {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(44, 44, 44, 0.2);
+  }
+  50% {
+    box-shadow: 0 6px 16px rgba(44, 44, 44, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
+  }
+}
+
+@keyframes kikko-tag-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Estados de los tags */
+.kikko-tag-selected {
+  animation: kikko-tag-glow 2s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(44, 44, 44, 0.2) !important;
+}
+
+.kikko-tag-selected:hover {
+  animation: kikko-tag-pulse 0.6s ease-in-out;
+  transform: scale(1.05) !important;
+}
+
+.kikko-tag-unselected:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.15) !important;
+}
+
+/* Responsividad específica para tags */
+@media (max-width: 768px) {
+  .kikko-tags-single-line {
+    gap: 0.5rem !important; /* Reducir gap en mobile */
+    padding-right: 1rem !important; /* Padding derecho para scroll */
+  }
+  
+  .kikko-tag-selected,
+  .kikko-tag-unselected {
+    padding: 0.25rem 0.5rem !important; /* Padding más compacto */
+    font-size: 0.7rem !important; /* Texto más pequeño */
+    white-space: nowrap !important;
+    flex-shrink: 0 !important; /* No permitir que se encojan */
+  }
+}
+
+@media (max-width: 480px) {
+  .kikko-tags-single-line {
+    gap: 0.375rem !important; /* Gap aún menor */
+  }
+  
+  .kikko-tag-selected,
+  .kikko-tag-unselected {
+    padding: 0.2rem 0.4rem !important; /* Muy compacto */
+    font-size: 0.65rem !important; /* Texto muy pequeño */
+    border-width: 1px !important; /* Border más delgado */
+  }
+  
+  /* Iconos más pequeños en mobile */
+  .kikko-tag-selected svg,
+  .kikko-tag-unselected svg {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+/* Efectos especiales para los iconos de los tags */
+@keyframes kikko-icon-sparkle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.9;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Animación específica para el icono cuando está seleccionado */
+.kikko-tag-selected svg {
+  animation: kikko-icon-sparkle 3s ease-in-out infinite;
+}
+
+/* Gradientes personalizados para tags especiales (opcional para futuro uso) */
+.kikko-tag-gradient-blue {
+  background: linear-gradient(135deg, var(--kikko-blue) 0%, var(--kikko-blue-light) 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+.kikko-tag-gradient-yellow {
+  background: linear-gradient(135deg, var(--kikko-yellow) 0%, var(--kikko-yellow-light) 100%) !important;
+  color: var(--pantone-black) !important;
+  border-color: transparent !important;
+}
+
+.kikko-tag-gradient-red {
+  background: linear-gradient(135deg, var(--kikko-red) 0%, var(--kikko-red-light) 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* RecipeCard - Nuevos estilos modernos para carrusel */
+.recipe-card-modern {
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recipe-card-modern:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    0 12px 30px rgba(5, 149, 211, 0.1);
+}
+
+/* Efectos especiales para badges en las tarjetas */
+@keyframes recipe-badge-glow {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 6px 16px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2);
+  }
+}
+
+@keyframes recipe-badge-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.recipe-badge-animated {
+  animation: recipe-badge-glow 3s ease-in-out infinite;
+}
+
+.recipe-badge-animated:hover {
+  animation: recipe-badge-pulse 0.6s ease-in-out;
+}
+
+/* Gradientes especiales para las tarjetas de recetas */
+.recipe-card-gradient-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(5, 149, 211, 0.1) 0%,
+    rgba(255, 215, 0, 0.1) 50%,
+    rgba(220, 53, 69, 0.1) 100%
+  );
+}
+
+/* Efectos de hover mejorados para las imágenes */
+.recipe-image-hover {
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.recipe-image-hover:hover {
+  transform: scale(1.08) rotate(1deg);
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+}
+
+/* Animaciones especiales para los CTAs */
+@keyframes recipe-cta-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.recipe-cta-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-cta-animated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.recipe-cta-animated:hover::before {
+  left: 100%;
+}
+
+/* Responsividad mejorada para las tarjetas de recetas */
+@media (max-width: 768px) {
+  .recipe-card-modern:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-card-modern:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Estados de carga para las imágenes de recetas */
+.recipe-image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: recipe-loading-shimmer 1.5s infinite;
+}
+
+@keyframes recipe-loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Efectos especiales para los iconos de las tarjetas */
+.recipe-icon-glow {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.recipe-icon-glow:hover {
+  filter: drop-shadow(0 4px 8px rgba(5, 149, 211, 0.3)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Buscador horizontal estilo referencia para RecipesPageV2 - Amarillo Kikko */
+.search-horizontal-container {
+  border-radius: 0;
+  background: var(--kikko-yellow); /* Amarillo Kikko sólido */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Input del buscador horizontal */
+.search-horizontal-input {
+  border-radius: 0;
+  border: 2px solid var(--kikko-blue);
+  font-family: 'Acumin Variable Concept', 'Inter', system-ui, -apple-system, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.search-horizontal-input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+  border-color: var(--kikko-blue-dark);
+  transform: none;
+}
+
+/* Botones de categoría horizontales */
+.search-category-horizontal {
+  border-radius: 0;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-family: 'Acumin Variable Concept', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.search-category-horizontal:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-category-horizontal:active {
+  transform: translateY(0);
+}
+
+/* Animaciones sutiles para las categorías */
+@keyframes category-glow-kikko {
+  0%, 100% {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(5, 149, 211, 0.3);
+  }
+}
+
+/* Efecto glow para botones activos */
+.search-category-horizontal.bg-kikko-blue {
+  animation: category-glow-kikko 3s ease-in-out infinite;
+}
+
+/* Responsividad para el buscador horizontal - Amarillo Kikko */
+@media (max-width: 1023px) {
+  .search-horizontal-container {
+    padding: 1rem !important;
+  }
+  
+  .search-category-horizontal {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    border-width: 2px !important;
+  }
+  
+  .search-category-horizontal svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-horizontal-container {
+    padding: 0.75rem !important;
+    background: var(--kikko-yellow) !important;
+  }
+  
+  .search-category-horizontal {
+    padding: 0.375rem 0.5rem !important;
+    font-size: 0.75rem !important;
+    border-width: 2px !important;
+  }
+  
+  .search-category-horizontal svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  .search-category-horizontal span {
+    display: none !important; /* Ocultar texto en mobile, solo iconos */
+  }
+  
+  /* Input más grande en mobile */
+  .search-horizontal-input {
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem !important;
+    border-width: 2px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Layout vertical en mobile muy pequeño */
+  .search-horizontal-layout {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  .search-categories-mobile {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+  
+  .search-category-horizontal {
+    padding: 0.5rem !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-width: 2px !important;
+  }
+  
+  /* Asegurar que el fondo amarillo se mantenga */
+  .search-horizontal-container {
+    background: var(--kikko-yellow) !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* ProductosPage - Panel de detalle horizontal mejorado */
+.product-detail-panel-fixed {
+  position: fixed !important;
+  top: 80px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: calc(100vh - 80px) !important;
+  z-index: 9999 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Responsivo para diferentes tamaños de header */
+@media (max-width: 768px) {
+  .product-detail-panel-fixed {
+    top: 70px !important;
+    height: calc(100vh - 70px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-panel-fixed {
+    top: 65px !important;
+    height: calc(100vh - 65px) !important;
+  }
+}
+@keyframes product-detail-slide-in {
+  0% {
+    transform: translateX(100%) scale(0.95);
+    opacity: 0;
+    filter: blur(2px);
+  }
+  50% {
+    transform: translateX(50%) scale(0.98);
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes product-detail-slide-out {
+  0% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  50% {
+    transform: translateX(50%) scale(0.98);
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  100% {
+    transform: translateX(100%) scale(0.95);
+    opacity: 0;
+    filter: blur(2px);
+  }
+}
+
+@keyframes product-detail-content-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes product-detail-image-zoom-in {
+  0% {
+    transform: scale(0.8) rotate(-10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Clases para el panel de detalle horizontal */
+.product-detail-panel-enter {
+  animation: product-detail-slide-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.product-detail-panel-exit {
+  animation: product-detail-slide-out 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Prevenir shift de layout cuando se bloquea el scroll */
+.product-detail-no-scroll {
+  overflow: hidden !important;
+  padding-right: 0px !important;
+  height: 100vh !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Optimización para GPU en el panel de detalle */
+.product-detail-panel-gpu {
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.product-detail-content-animate {
+  animation: product-detail-content-fade-in 0.8s ease-out forwards;
+}
+
+.product-detail-image-animate {
+  animation: product-detail-image-zoom-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Efectos especiales para el panel */
+.product-detail-panel-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Scroll personalizado para el panel de detalles */
+.product-detail-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--kikko-blue) #f1f5f9;
+  scroll-behavior: smooth;
+}
+
+.product-detail-scroll::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.product-detail-scroll::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 4px;
+}
+
+.product-detail-scroll::-webkit-scrollbar-thumb {
+  background: var(--kikko-blue);
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease;
+}
+
+.product-detail-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--kikko-blue-dark);
+  border-color: #f8fafc;
+}
+
+/* Animaciones de partículas para el panel */
+@keyframes product-detail-particles {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-15px) translateX(8px) rotate(90deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) translateX(-4px) rotate(180deg);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateY(-20px) translateX(-12px) rotate(270deg);
+    opacity: 0.4;
+  }
+}
+
+.animate-product-detail-particles {
+  animation: product-detail-particles 6s ease-in-out infinite;
+}
+
+/* Hover effects mejorados para controles del panel */
+.product-detail-control-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-detail-control-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.product-detail-control-button:hover::before {
+  left: 100%;
+}
+
+/* Responsividad para el panel de detalle */
+@media (max-width: 1023px) {
+  .product-detail-panel-content {
+    flex-direction: column !important;
+  }
+  
+  .product-detail-panel-left,
+  .product-detail-panel-right {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  
+  .product-detail-panel-left {
+    order: 1;
+  }
+  
+  .product-detail-panel-right {
+    order: 2;
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-panel-header {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+  
+  .product-detail-panel-title {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .product-detail-panel-controls {
+    justify-content: center !important;
+  }
+  
+  .product-detail-panel-right {
+    padding: 1rem !important;
+  }
+  
+  .product-detail-image {
+    max-width: 200px !important;
+    max-height: 250px !important;
+  }
+}
+
+/* ProductDetailPageV2 - Video de fondo con controles */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+/* Estados del video con filtros */
+.video-background.blur-light {
+  filter: blur(2px) brightness(0.9);
+}
+
+.video-background.blur-medium {
+  filter: blur(4px) brightness(0.8);
+}
+
+.video-background.blur-heavy {
+  filter: blur(8px) brightness(0.7);
+}
+
+/* Overlays de color para el video */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.video-overlay.none {
+  background: transparent;
+}
+
+.video-overlay.dark {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.video-overlay.darker {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay.kikko-blue {
+  background: rgba(5, 149, 211, 0.2);
+}
+
+.video-overlay.kikko-yellow {
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.video-overlay.kikko-red {
+  background: rgba(220, 53, 69, 0.2);
+}
+
+/* Botón de control de video mejorado */
+.video-control-button {
+  position: fixed !important;
+  top: 6rem !important;
+  right: 6px !important;
+  z-index: 60 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 16px !important;
+  padding: 12px !important;
+  min-width: 64px !important;
+  min-height: 64px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 4px 16px rgba(5, 149, 211, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.video-control-button:hover {
+  transform: scale(1.1) !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.2),
+    0 8px 24px rgba(5, 149, 211, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.video-control-button:active {
+  transform: scale(0.95) !important;
+}
+
+/* Estados específicos del botón */
+.video-control-button.clear {
+  background: rgba(34, 197, 94, 0.2) !important;
+  border-color: rgba(34, 197, 94, 0.4) !important;
+  color: #22c55e !important;
+}
+
+.video-control-button.blur {
+  background: rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  color: #3b82f6 !important;
+}
+
+.video-control-button.overlay {
+  background: rgba(168, 85, 247, 0.2) !important;
+  border-color: rgba(168, 85, 247, 0.4) !important;
+  color: #a855f7 !important;
+}
+
+/* Animaciones para el botón de control */
+@keyframes video-control-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      0 4px 16px rgba(5, 149, 211, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.2),
+      0 8px 24px rgba(5, 149, 211, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
+.video-control-button {
+  animation: video-control-pulse 3s ease-in-out infinite;
+}
+
+/* Tooltip para el botón de control */
+.video-control-tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 70;
+}
+
+.video-control-button:hover .video-control-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividad para el botón de control */
+@media (max-width: 768px) {
+  .video-control-button {
+    top: 5.5rem !important;
+    right: 12px !important;
+    min-width: 56px !important;
+    min-height: 56px !important;
+    padding: 10px !important;
+  }
+  
+  .video-control-button svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-control-button {
+    top: 5rem !important;
+    right: 16px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    padding: 8px !important;
+  }
+  
+  .video-control-button svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  .video-control-tooltip {
+    right: -20px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Efectos especiales para video en transición */
+.video-transitioning {
+  transform: scale(1.05);
+  filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+/* Prevenir problemas de reproducción de video */
+.video-background {
+  -webkit-playsinline: true;
+  playsinline: true;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Fallback para navegadores que no soportan video */
+@supports not (object-fit: cover) {
+  .video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+/* Optimizaciones de performance para video */
+.video-background {
+  will-change: filter, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Estados de carga del video */
+.video-loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: rgba(255, 255, 255, 0.8);
+  animation: spin 1s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RecipesPageV2 - Diseño Masonry estilo Pinterest/Blog */
+
+/* Sección de recetas con fondo culinario */
+.recipes-section-culinary-bg {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optimización para mobile - background attachment */
+@media (max-width: 768px) {
+  .recipes-section-culinary-bg {
+    background-attachment: scroll; /* Mejor performance en mobile */
+  }
+}
+
+/* Overlay mejorado para la sección */
+.culinary-bg-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.65) 25%,
+    rgba(5, 149, 211, 0.15) 50%,
+    rgba(0, 0, 0, 0.65) 75%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+/* Efectos especiales para el texto sobre fondo culinario */
+.culinary-text-enhanced {
+  /* Sombras eliminadas por solicitud del usuario */
+}
+
+/* Badge mejorado sobre fondo culinario */
+.culinary-badge-enhanced {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(255, 215, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Grid masonry principal */
+.masonry-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Desktop: 4 columnas */
+@media (min-width: 1280px) {
+  .masonry-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet large: 3 columnas */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .masonry-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .masonry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Mobile: 1 columna */
+@media (max-width: 767px) {
+  .masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Tarjeta principal (hero) - Mejorada para fondo culinario */
+.masonry-hero-card {
+  border-radius: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    0 4px 16px rgba(5, 149, 211, 0.15);
+}
+
+.masonry-hero-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 32px 64px rgba(0, 0, 0, 0.3),
+    0 16px 40px rgba(5, 149, 211, 0.2),
+    0 0 0 2px rgba(255, 215, 0, 0.3);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Tarjetas secundarias - Mejoradas para fondo culinario */
+.masonry-card {
+  border-radius: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.2),
+    0 3px 12px rgba(5, 149, 211, 0.1);
+}
+
+.masonry-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 
+    0 20px 48px rgba(0, 0, 0, 0.25),
+    0 12px 24px rgba(5, 149, 211, 0.15),
+    0 0 0 1px rgba(255, 215, 0, 0.2);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Efectos especiales para las imágenes del masonry */
+.masonry-hero-card img,
+.masonry-card img {
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.masonry-hero-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.masonry-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.03) contrast(1.03);
+}
+
+/* Animaciones específicas para el masonry */
+@keyframes masonry-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes masonry-hero-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Clases para líneas de texto cortadas */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Badges especiales para masonry */
+.masonry-hero-card .badge,
+.masonry-card .badge {
+  border-radius: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Overlays de gradiente mejorados */
+.masonry-hero-card .absolute.inset-0 {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.1) 70%,
+    transparent 100%
+  );
+}
+
+/* Efectos de texto en la tarjeta hero */
+.masonry-hero-card h3 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.masonry-hero-card p {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.4;
+}
+
+/* Responsividad específica para masonry */
+@media (max-width: 767px) {
+  /* En mobile, todas las tarjetas tienen tamaños similares */
+  .masonry-hero-card {
+    height: auto !important;
+  }
+  
+  .masonry-hero-card .relative {
+    height: 16rem !important; /* h-64 equivalent */
+  }
+  
+  .masonry-card .relative {
+    height: 12rem !important; /* h-48 equivalent */
+  }
+  
+  /* Texto más compacto en mobile */
+  .masonry-hero-card h3 {
+    font-size: 1.25rem !important; /* text-xl */
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .masonry-hero-card p {
+    font-size: 0.875rem !important; /* text-sm */
+    margin-bottom: 1rem !important;
+  }
+  
+  .masonry-card h3 {
+    font-size: 1rem !important; /* text-base */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet: ajustar tamaños para mejor distribución */
+  .masonry-hero-card .relative {
+    height: 20rem !important; /* Más alto en tablet */
+  }
+}
+
+/* Estados de loading para las imágenes del masonry */
+.masonry-image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: masonry-loading-shimmer 1.5s infinite;
+}
+
+@keyframes masonry-loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Efectos especiales para badges en masonry */
+.masonry-hero-card .badge {
+  background: rgba(255, 215, 0, 0.95) !important;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: var(--kikko-blue) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effects mejorados para meta información */
+.masonry-hero-card .text-white\\/80:hover,
+.masonry-card .text-gray-500:hover {
+  color: var(--kikko-blue) !important;
+  transition: color 0.3s ease;
+}
+
+/* Animación sutil para iconos en masonry */
+.masonry-hero-card svg,
+.masonry-card svg {
+  transition: all 0.3s ease;
+}
+
+.masonry-hero-card:hover svg,
+.masonry-card:hover svg {
+  transform: scale(1.1);
+}
+
+/* Mejoras para el mensaje de "sin resultados" */
+.masonry-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* Efectos especiales para rating en masonry */
+.masonry-rating-bg {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 4px;
+}
+
+.masonry-rating-hero {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 4px;
+}
+
+/* Efectos de partículas sutiles para la sección culinaria */
+@keyframes culinary-particles-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(90deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-5px) rotate(180deg);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateY(-30px) translateX(-15px) rotate(270deg);
+    opacity: 0.4;
+  }
+}
+
+/* Animación de ondas sutiles en el fondo */
+@keyframes culinary-wave-glow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.05;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.15;
+  }
+}
+
+/* Mejora del contraste para el resultado de búsqueda sobre fondo culinario */
+.culinary-search-results-badge {
+  background: rgba(5, 149, 211, 0.95) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(5, 149, 211, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Mensaje de sin resultados mejorado para fondo culinario */
+.culinary-no-results {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.3),
+    0 8px 24px rgba(5, 149, 211, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Animaciones para elementos flotantes decorativos */
+.animate-culinary-particles-float {
+  animation: culinary-particles-float 8s ease-in-out infinite;
+}
+
+.animate-culinary-wave-glow {
+  animation: culinary-wave-glow 6s ease-in-out infinite;
+}
+
+/* Efecto de vapor sutil para agregar ambiente culinario */
+@keyframes culinary-steam {
+  0% {
+    opacity: 0.1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(-40px) scale(1.2);
+  }
+  100% {
+    opacity: 0.05;
+    transform: translateY(-80px) scale(0.8);
+  }
+}
+
+.animate-culinary-steam {
+  animation: culinary-steam 4s ease-in-out infinite;
+}
+
+/* RecipesPageV2 - Animaciones de construcción progresiva del grid masonry */
+@keyframes masonry-build-in {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.8) rotateX(-15deg);
+    filter: blur(4px);
+  }
+  25% {
+    opacity: 0.3;
+    transform: translateY(40px) scale(0.85) rotateX(-10deg);
+    filter: blur(3px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(20px) scale(0.92) rotateX(-5deg);
+    filter: blur(2px);
+  }
+  75% {
+    opacity: 0.8;
+    transform: translateY(10px) scale(0.96) rotateX(-2deg);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes masonry-badge-spin-in {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes masonry-rating-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(-5px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes masonry-content-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes masonry-meta-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Clases para las animaciones de construcción */
+.masonry-build-animation {
+  animation: masonry-build-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Efectos adicionales para la construcción progresiva */
+@keyframes masonry-grid-construct {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(-10deg) rotateY(5deg) translateZ(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+  }
+}
+
+/* Animación para el título de la sección */
+@keyframes masonry-title-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Animación para el badge de resultados */
+@keyframes masonry-badge-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Efectos de brillo sutil durante la construcción */
+@keyframes masonry-card-glow-build {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 8px 24px rgba(0, 0, 0, 0.15),
+      0 4px 16px rgba(255, 215, 0, 0.2),
+      0 0 20px rgba(255, 215, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Aplicar brillo durante la construcción */
+.masonry-build-animation.masonry-card {
+  animation: 
+    masonry-build-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+    masonry-card-glow-build 1.2s ease-in-out;
+}
+
+/* Efectos especiales para elementos que aparecen en secuencia */
+.masonry-sequence-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.masonry-sequence-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.masonry-sequence-delay-3 {
+  animation-delay: 0.45s;
+}
+
+.masonry-sequence-delay-4 {
+  animation-delay: 0.6s;
+}
+
+.masonry-sequence-delay-5 {
+  animation-delay: 0.75s;
+}
+
+.masonry-sequence-delay-6 {
+  animation-delay: 0.9s;
+}
+
+/* Animación de ondas para acompañar la construcción */
+@keyframes masonry-wave-build {
+  0% {
+    transform: translateX(-100%) scaleY(0);
+  }
+  50% {
+    transform: translateX(0%) scaleY(1);
+  }
+  100% {
+    transform: translateX(100%) scaleY(0);
+  }
+}
+
+/* Efecto de construcción en cascada */
+.masonry-cascade-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(5, 149, 211, 0.1) 0%,
+    rgba(255, 215, 0, 0.1) 50%,
+    rgba(220, 53, 69, 0.1) 100%
+  );
+  opacity: 0;
+  animation: masonry-wave-build 2s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hover mejorado después de la construcción */
+.masonry-build-animation.masonry-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 8px 24px rgba(5, 149, 211, 0.1);
+}
+
+/* Efectos de partículas sutiles durante la construcción */
+@keyframes masonry-particles-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-10px) rotate(90deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateY(-15px) rotate(270deg);
+    opacity: 0.4;
+  }
+}
+
+/* Aplicar partículas flotantes durante la construcción */
+.masonry-build-animation::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 4px;
+  height: 4px;
+  background: var(--kikko-yellow);
+  border-radius: 50%;
+  opacity: 0;
+  animation: masonry-particles-float 3s ease-in-out infinite;
+  animation-delay: var(--particle-delay, 1s);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* RecipesPageV2 - Video de fondo con controles */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+/* Overlays de color para el video */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.video-overlay.none {
+  background: transparent;
+}
+
+.video-overlay.dark {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.video-overlay.darker {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay.kikko-blue {
+  background: rgba(5, 149, 211, 0.2);
+}
+
+.video-overlay.kikko-yellow {
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.video-overlay.kikko-red {
+  background: rgba(220, 53, 69, 0.2);
+}
+
+/* Botones de control de video */
+.video-control-button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 4px 16px rgba(5, 149, 211, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+.video-control-button:hover {
+  transform: scale(1.05) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.2),
+    0 8px 24px rgba(5, 149, 211, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.video-control-button:active {
+  transform: scale(0.95) !important;
+}
+
+/* Imagen de fondo culinaria cuando no hay video */
+.culinary-bg-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 25%,
+    rgba(5, 149, 211, 0.1) 50%,
+    rgba(0, 0, 0, 0.4) 75%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
