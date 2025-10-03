@@ -34,7 +34,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'python', 'typescript' ] # Cambia los lenguajes según tu proyecto
+        language: [ 'javascript', 'typescript' ] # Cambia los lenguajes según tu proyecto
 
     steps:
       - name: Checkout repository
